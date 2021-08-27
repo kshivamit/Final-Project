@@ -1,0 +1,43 @@
+﻿@model Core.Entity.Employee
+<form asp-action="CreateEmployee" asp-controller="Employee">
+
+    <div class="form-group">
+        <input type="hidden" asp-for="Id" />
+        <label asp-for="EmpName" for="exampleInputEmail1">Employee Name</label>
+        <input type="text" asp-for="EmpName" class="form-control" aria-describedby="emailHelp" placeholder="Enter Employee Name">
+        <span asp-validation-for="EmpName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EmpCode" for="exampleInputEmail1">Employee Code</label>
+        <input type="text" asp-for="EmpCode" class="form-control" aria-describedby="emailHelp" placeholder="Enter Employee Code">
+        <span asp-validation-for="EmpCode" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Gender" for="exampleFormControlSelect1">Gender</label>
+        <select asp-for="Gender" class="form-control">
+            <option active>Male</option>
+            <option>Female</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DepartmentName" for="exampleInputEmail1">Department Name</label>
+        <input type="text" asp-for="DepartmentName" class="form-control" aria-describedby="emailHelp" placeholder="Enter Department Name">
+        <span asp-validation-for="DepartmentName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Salary" for="exampleInputEmail1">Salary</label>
+        <input type="number" asp-for="Salary" class="form-control" aria-describedby="emailHelp" placeholder="Enter Salary">
+        <span asp-validation-for="Salary" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EmpImage" for="exampleInputEmail1">Employee Image</label>
+        <input type="file" asp-for="EmpImage" class="form-control" aria-describedby="emailHelp">
+        <span asp-validation-for="EmpImage" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
